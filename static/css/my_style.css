@@ -1,0 +1,138 @@
+.date-link
+{
+padding : 5px;
+}
+	.img-fluid {
+  opacity: 0.3;
+  filter: grayscale(100%) ; /* For IE8 and earlier */
+	display: block;
+	width:100%;
+  /*  margin-left: auto;
+    margin-right: auto;*/
+
+}
+
+
+.img-fluid:hover {
+  opacity: 0.8;
+  filter:  grayscale(0%); /* For IE8 and earlier */
+	display: block;
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+.text-centered {
+	font-weight: bold;
+  font-size: 16px;
+  font-family: Helvetica;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	color: #003366;
+	 text-align: center;
+}
+
+#main_menu
+{
+display: flex;
+flex-direction: row;
+}
+#main_menu>li
+{
+padding-left: 20px;
+}
+
+
+img.debater-pic
+{
+object-fit: contain;
+border-radius: 50%;
+width:120px;
+height:120px;
+}
+div.debate-pic
+{
+text-align:center;
+object-fit: contain;
+width:120px;
+height:120px;
+}
+.right-speaker
+{display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-speaker
+{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right-speaker .row
+{
+width: 100%;
+  text-align: right;
+}
+
+div > figure > a > img
+{
+
+height:120px;
+object-fit: contain;
+}
+img  .debater-pic
+{
+
+height:120px;
+object-fit: contain;
+}
+div.debate-pic
+{
+text-align:center
+object-fit: contain;
+}
+.debates-sqr >img
+{
+
+  /*width: 400px;
+  height: 300px;*/
+}
+
+
+.navbar-nav .dropdown-menu {
+
+	 position: absolute !important;
+
+}
+figure {
+    display: inline-block;
+    text-align: center;
+
+}
+
+figure figcaption {
+    /*border: 1px dotted blue;*/
+    text-align: center;
+}
+.contact-pic
+{
+	position: relative;
+  float: left;
+  width:  200px;
+  height: 200px;
+	/*object-fit: contain;*/
+	vertical-align: top;
+
+	border-radius: 100px;
+
+
+}
+.debates-sqr  figure
+{
+	width:100%;
+
+}

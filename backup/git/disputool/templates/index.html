@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Arguments in Presidential Elections Demo</title>
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/static/css/sb-admin.css" rel="stylesheet">
+	  
+	  
+	
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+
+<style>
+.date-link
+{
+padding : 5px;
+}
+	.img-fluid {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.img-fluid:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+	.text-centered {
+	font-size: 18px;
+	font-family: Helvetica;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+
+
+<body>
+ <header class="masthead" style="background-image: url('/static/images/bg-header-app.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Presidential Election Debates From 1960 to 2016 </h1>
+            <span class="subheading">Mining and Exploring arguments</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Explore </div>
+      <div class="list-group list-group-flush">
+	<a href="/explore" class="list-group-item list-group-item-action bg-light">All Arguments</a>
+	<a href="/ner" class="list-group-item list-group-item-action bg-light">Named Entities</a>
+	<hr>
+
+	<a href="/form" class="list-group-item list-group-item-action bg-light">Test Model</a>
+        
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" >
+	<div style="filter: alpha(opacity=60); background-image: url('/static/images/bg-header-app.jpg');">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </nav>
+		</div>
+
+      <div class="container-fluid" >
+	
+
+        <h1 class="mt-4"></h1>
+	<div class="container-fluid" width= '80%' >
+		<div id="mdb-lightbox-ui"></div>
+
+    <div class="mdb-lightbox">
+		
+  <div class="row">
+    <div class="col-sm-4">
+		<figure >
+        <a href="/explore/1960" data-size="100x100">
+			<span class="text-centered"> Kennedy - Nixon 1960</span>
+          <img src="/static/images/1960.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+	
+    <div class="col-sm-4">
+		<figure >
+        <a href="/explore/1976" data-size="100x100">
+			<span class="text-centered"> Carter - Ford 1976</span>
+          <img src="/static/images/1976.jpg" class="img-fluid"/>
+        </a>
+      </figure>
+	  </div>
+    <div class="col-sm-4">
+		<figure>
+        <a href="/explore/1980" data-size="100x100">
+			<span class="text-centered"> Anderson - Carter - Reagan 1980</span>
+          <img src="/static/images/1980.jpg" class="img-fluid" />
+        </a>
+      </figure>
+	  </div>
+	  
+	  
+	  
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"><figure >
+        <a href="/explore/1984" data-size="100x100">
+			<span class="text-centered"> Mondale - Reagan 1984</span>
+          <img src="/static/images/1984.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/1988" data-size="100x100">
+			<span class="text-centered"> Bush - Dukakis 1988</span>
+          <img src="/static/images/1988.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/1992" data-size="100x100">
+			<span class="text-centered"> Bush - Clinton - Perot 1992</span>
+          <img src="/static/images/1992.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"><figure >
+        <a href="/explore/1996" data-size="100x100">
+			<span class="text-centered"> Clinton - Dole 1996</span>
+          <img src="/static/images/1996.jpg" class="img-fluid"/>
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/2000" data-size="100x100">
+			<span class="text-centered"> Bush - Gore 2000</span>
+          <img src="/static/images/2000.jpg" class="img-fluid"/>
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/2004" data-size="100x100">
+			<span class="text-centered"> Bush - Kerry 2004</span>
+          <img src="/static/images/2004.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"><figure >
+        <a href="/explore/2008" data-size="100x100">
+			<span class="text-centered"> Mccain - Obama 2008</span>
+          <img src="/static/images/2008.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/2012" data-size="100x100">
+			<span class="text-centered"> Obama - Romney 2012</span>
+          <img src="/static/images/2012.jpg" class="img-fluid" />
+        </a>
+      </figure></div>
+    <div class="col-sm-4"><figure >
+        <a href="/explore/2016" data-size="100x100">
+			<span class="text-centered"> Clinton - Trump 2016</span>
+          <img src="/static/images/2016.jpg" class="img-fluid"/>
+        </a>
+      </figure>
+	  </div>
+  </div>
+</div><!--/mdb-lightbox-->
+  
+</div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Core plugin JavaScript-->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="/static/vendor/chart.js/Chart.min.js"></script>
+  <script src="/static/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="/static/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/static/js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="/static/js/demo/datatables-demo.js"></script>
+  <script src="/static/js/demo/chart-area-demo.js"></script>
+	<script src="/static/js/clean-blog.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

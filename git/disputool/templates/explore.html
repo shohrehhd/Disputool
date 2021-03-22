@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Explore arguments in debates </title>
+
+  <!-- Bootstrap core CSS -->
+<link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Page level plugin CSS-->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/static/css/sb-admin.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+<style>
+img.debater-pic
+{
+
+width:200px;
+height:240px;
+}
+div.debate-pic
+{
+text-align:center
+}
+</style>
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Options </div>
+      <div class="list-group list-group-flush">
+	<a href="/explore" class="list-group-item list-group-item-action bg-light">Explore All Arguments</a>
+	<a href="/ner" class="list-group-item list-group-item-action bg-light">Named Entities</a>
+	<hr>
+
+	<a href="/form" class="list-group-item list-group-item-action bg-light">Test Model</a>
+
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+           <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+             
+            </li>-->
+          </ul>
+        </div>
+      </nav>
+      <!--<div class = "container-fluid">
+	      <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Year</a>
+                <a class="dropdown-item" href="#">Date</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Speaker</a>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="#">Component</a>
+              </div>
+            </li>
+	</div>-->
+      <div class="container-fluid">
+	  <!-- <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-chart-area"></i>
+            Arguments</div>
+          <div class="card-body">
+            <canvas id="myAreaChart" width="100%" height="30"></canvas>
+          </div>
+          <div class="card-footer small text-muted"></div>
+        </div>-->
+	
+	<div class="container-fluid">
+		<div class="row">
+		
+	  	{%for debater in debaters:%}
+		
+			<div class="col-sm-2 p-4 ">
+				{{debater|safe}}
+
+
+			</div>
+                {%endfor%}    
+		    </div>
+        </div>	
+		  
+	<div class="container-fluid">
+	  <div class="row">
+		
+	  	{%for date in dates:%}
+			<div class="col-sm-3 p-4 ">
+
+                     {{date|safe}}
+			</div>
+
+		{%endfor%}
+		</div>
+		   
+        </div>	
+		  
+		  
+ 	<div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Arguments Table</div>
+          <div class="card-body">
+		<div name = "arg_table" class = "table-responsive">
+
+
+	{{result|safe}}
+	</div>
+</div>
+<div class="card-footer small text-muted"></div>
+</div>
+        
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Core plugin JavaScript-->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="/static/vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/static/js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="/static/js/demo/chart-area-demo.js"></script>
+  <script src="/static/js/demo/chart-bar-demo.js"></script>
+  <script src="/static/js/demo/chart-pie-demo.js"></script>
+  <script src="/static/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="/static/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/static/js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="/static/js/demo/datatables-demo.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

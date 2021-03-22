@@ -1,0 +1,27 @@
+﻿This is a demo for our system “DISPUTool”. 
+
+Disputool uses Natural language processing methods along with Argument mining methods to extract the arguments in these debates.
+
+Now let’s take a look at the fetaures provided by Disputool:
+
+Firstly, The user can explore the dataset of 60 years of presidential election debates from 1960 to 2016 which is annotated with argument compoenents (Claims and premises). 
+User can select any year to explore the arguments  or search the datasets for special topics.
+Disputool will show the argument components in debates along with the name of the speaker and the date of the debate.
+The user can search for keywords in the debates to find arguments on specific issues made by candidates.
+
+The user can also explore the transcript of each debate in a graphic view by clicking on the date of debate provided above. Cheking these boxes highlights the argument compoenents annotated in the dataset.
+
+Secondly, The user can test the trained model to identify the argument components in sample texts.
+
+The user can provide the sample text from the dataset such as this sample text clinton -trump debate, which will run the model on the text.
+
+We can see the results provided by the model, Claims are marked in green and premises with blue color. 
+
+The user can also test the model on  some new data sample.
+
+
+The third feature of Disputool is exploring the named entities used in the debates.
+
+user can detect the most common named entities used in this debates and filter based on the year of the debate, name of the speaker and type of the named entity.
+
+This system has several basic features such as  exploring arguments and named entities in presidential debates in the US and identifying argument components on provided samples.

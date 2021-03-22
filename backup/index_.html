@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.h"%}
+{% inport "bootstrap/wtf.html" as wtf%}
+
+{%block title%}
+<title>Mine claims and Premises in US Debates</title>
+{% endblock%}
+{% block content%}
+<div class="container">
+<form method ="POST" action ="/">
+<dl>
+{{form.csrf_token}}
+{{wtf.form_field(form.year)}}
+
+</dl>
+</form>
+</div>
+{% endblock %}
+</html>
+

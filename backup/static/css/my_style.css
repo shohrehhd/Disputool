@@ -1,0 +1,92 @@
+.date-link
+{
+padding : 5px;
+}
+	.img-fluid {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.img-fluid:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+.text-centered {
+  font-size: 18px;
+  font-family: Helvetica;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main_menu
+{
+display: flex;
+flex-direction: row;
+}
+#main_menu>li
+{
+padding-left: 20px;
+}
+
+
+img.debater-pic
+{
+border-radius: 50%;
+width:120px;
+height:120px;
+}
+div.debate-pic
+{
+text-align:center
+
+}
+.right-speaker
+{display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-speaker
+{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+figcaption
+{
+text-align:center
+}
+.right-speaker .row
+{
+width: 100%;
+  text-align: right;
+}
+
+img.debater-pic
+{
+
+width:180px;
+height:200px;
+}
+div.debate-pic
+{
+text-align:center
+}
+.debates-sqr >img
+{
+  width: 400px;
+  height: 300px;
+}
+
+.contact-pic
+{
+	width:200px;
+	height :200px;
+	border-radius: 100px;
+	border: 2px solid #4287f5;
+
+}

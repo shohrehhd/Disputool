@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+img.debater-pic
+{
+border-radius: 50%;
+width:120px;
+height:120px;
+}
+div.debate-pic
+{
+text-align:center
+
+}
+.right-speaker
+{display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-speaker
+{
+display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+figcaption
+{
+text-align:center
+}
+.right-speaker .row
+{
+width: 100%;
+  text-align: right;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Arguments in Presidential Elections Demo</title>
+  <link href="/static/css/clean-blog.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="/static/css/sb-admin.css" rel="stylesheet">
+  <link href="/static/css/talk.css" rel="stylesheet">
+	  
+  <link rel="stylesheet" href="/static/css/jqcloud.min.css">
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+
+</head>
+
+
+<body>
+
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Options </div>
+      <div class="list-group list-group-flush">
+	<a href="/explore" class="list-group-item list-group-item-action bg-light">Explore All Arguments</a>
+	<a href="/ner" class="list-group-item list-group-item-action bg-light">Named Entities</a>
+	<hr>
+
+	<a href="/form" class="list-group-item list-group-item-action bg-light">Test Model</a>
+
+        
+      </div>
+    </div>
+
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" >
+
+	<div style="filter: alpha(opacity=60); background-image: url('/static/images/bg-header-app.jpg');">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home </a>
+            </li>
+      
+          </ul>
+        </div>
+      </nav>
+	</div>
+
+      <div class="container-fluid" >
+	<input id="date" name="date" type="hidden" value={{date}} />
+	<h1 id="date" >{{date}}</h1>
+
+
+	<!--<h1 id="debate_date">{{date}}</h1>-->
+
+         <div class="row">
+ 		 <div class="col-sm-8">
+		{{chat|safe}}
+    		</div>
+	       <div class="col-sm-2" >
+
+		<div id="word_cloud_small">
+			
+    		</div>
+		<h3 > Filter</h3>
+
+			<input type="checkbox" id="claim_cb" class ="form-check-input"  name="claim" value='claim' > <span class="bg-success"><b>Highlight Claims.</b></span></input>
+			
+  	
+			<br>
+			<input type="checkbox" id="premise_cb" class ="form-check-input"  name="premise" value='premise' > <span class="bg-info"><i>Highlight Premises.</i></span></input>
+			
+
+		</div>
+	</div>
+		
+
+
+
+
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Core plugin JavaScript-->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="/static/vendor/chart.js/Chart.min.js"></script>
+  <script src="/static/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="/static/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/static/js/sb-admin.min.js"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="/static/js/demo/datatables-demo.js"></script>
+  <script src="/static/js/demo/chart-area-demo.js"></script>
+	<script src="/static/js/clean-blog.min.js"></script>
+ <script type="text/javascript" src="/static/js/jqcloud.min.js"></script>
+  <script type="text/javascript" src="/static/js/cloud-small-script.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+
+	$("#claim_cb").change(function() {
+   	 if(this.checked) {
+		$(".claim").addClass("bg-success");
+		$(".claim").css("font-weight","bold");
+
+
+		   }
+	else{
+		$(".claim").removeClass("bg-success");
+		$(".claim").css("font-weight","");
+		}});
+	$("#premise_cb").change(function() {
+   	 if(this.checked) {
+		$(".premise").addClass("bg-info"); 
+		$(".premise").css("font-style","italic");	 }
+	else{
+		$(".premise").removeClass("bg-info");
+		$(".premise").css("font-style","");
+}});
+
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
