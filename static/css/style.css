@@ -222,7 +222,7 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 }
 
 .main-menu ul.navbar-nav li a:hover {
-  color: #3EC1D5;
+  color: #737575;
 }
 
 .navbar {
@@ -2264,6 +2264,8 @@ span.email-notes {
   width: 400px;
   height: 300px;
 }
+
+
 
 /*----------------------------------------
  .End CSS

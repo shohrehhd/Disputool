@@ -58,9 +58,10 @@ width:120px;
 height:120px;
 }
 .right-speaker
-{display: flex;
+{
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
 }
 
@@ -68,7 +69,7 @@ height:120px;
 {
 display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -95,12 +96,6 @@ div.debate-pic
 text-align:center
 object-fit: contain;
 }
-.debates-sqr >img
-{
-
-  /*width: 400px;
-  height: 300px;*/
-}
 
 
 .navbar-nav .dropdown-menu {
@@ -118,21 +113,33 @@ figure figcaption {
     /*border: 1px dotted blue;*/
     text-align: center;
 }
-.contact-pic
-{
-	position: relative;
-  float: left;
-  width:  200px;
-  height: 200px;
-	/*object-fit: contain;*/
-	vertical-align: top;
 
-	border-radius: 100px;
-
-
-}
 .debates-sqr  figure
 {
 	width:100%;
 
 }
+span.premise-color{
+  color: #fff;
+  background-color: #1496BB;
+  border-width: 1px;
+  border-color: #0D3D56;
+
+}
+span.claim-color{
+  color: #fff;
+  background-color: #93A661;
+  border-width: 1px;
+  border-color: #829356;
+
+}
+
+.header_logo
+{
+  max-height: 80px;
+  
+}
+
+
+
+

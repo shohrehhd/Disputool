@@ -55,7 +55,8 @@ class Model:
 		if(self.LoadModel(save_directory)):
 			self.embedding_model._make_predict_function()
 		else:
-			raise Exception("Could not load model in ", save_directory)
+			pass
+			#raise Exception("Could not load model in ", save_directory)
 
 
 

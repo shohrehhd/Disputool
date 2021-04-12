@@ -125,13 +125,13 @@ def RightBubble(name,speech,anns):
 
 	img_html=CreateImgHtml(name)
 	bubble = '<div class="talk-bubble tri-right talk-round talk-border right-top"> <div class="talktext">'+CreateSpeechTag(speech,anns)+' </div> </div>'
-	final  = "<div class ='right-speaker'><div class = 'row'>"+bubble+img_html+"</div></div>"
+	final  = "<div class ='right-speaker'><div class = 'row justify-content-end'>"+bubble+img_html+"</div></div>"
 	return final
 
 def LeftBubble(name, speech,anns):
 	img_html=CreateImgHtml(name)
 	bubble = '<div class="talk-bubble tri-right talk-round talk-border left-top"> <div class="talktext">'+CreateSpeechTag(speech,anns)+'</div> </div>'
-	final  = "<div class ='left-speaker'><div class='row'>"+img_html+bubble+"</div></div>"
+	final  = "<div class ='left-speaker'><div class='row justify-content-start'>"+img_html+bubble+"</div></div>"
 	return final
 
 def createTable(db,ann_db):
