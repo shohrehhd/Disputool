@@ -179,21 +179,32 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   display: inline-block;
   height: 70px;
   padding: 15px 0;
+  
+}
+.navbar-header > a.link {
+  
+  color: #6c757d;
 }
 
 .main-menu ul.navbar-nav li {
   display: inline-block;
   padding: 0px 13px;
+  
 }
 
 .main-menu ul.navbar-nav li a {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  color: #fff;
+  color: #6c757d !important;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 800;
   padding: 24px 0px;
   text-transform: capitalize;
   letter-spacing: 1px;
+
+
+}
+
+
 }
 
 .main-menu ul.navbar-nav li.active > a::after {
@@ -203,11 +214,14 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   left: 0;
   position: absolute;
   width: 100%;
+  color: #6c757d;
+
 }
 
 .main-menu ul.navbar-nav li.active a:hover {
   background: none;
   color: #fff;
+
 
 }
 
@@ -219,6 +233,7 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   color: #fff;
   position: relative;
+
 }
 
 .main-menu ul.navbar-nav li a:hover {
