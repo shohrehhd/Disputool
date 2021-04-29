@@ -1,4 +1,0 @@
- 10.244.0.17
-
-Username : user
-Password : AntxaV56@
